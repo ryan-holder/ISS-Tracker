@@ -20,7 +20,7 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
 //     radius: 150000
 // }).addTo(map);
 
-const imageUrl = "http://open-notify.org/Open-Notify-API/map/ISSIcon.png";
+const imageUrl = "./ISSIcon.png";
 const imageBounds = [
 	[0, 0],
 	[0, 0],
