@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"
+		/>
+		<title>ISS Tracker</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inconsolata");
+		</style>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			crossorigin=""
+		/>
+	</head>
+	<body>
+		<nav>
+			<p class="logo">🚀</p>
+			<ul class="nav">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Lorem</a></li>
+				<li><a href="#">Ispum</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1 class="main">
+				Where is the International Space Station?
+				<hr />
+			</h1>
+		</main>
+		<div class="notmain">
+			<div class="abovemap">
+				<p id="latlong">Searching for ISS latitude and longitude...</p>
+				<p id="time">Finding the current time...</p>
+			</div>
+			<div id="map"></div>
+			<div class="belowmap">
+				<p id="astronauts">Finding the current astronauts in space...</p>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>🚀🚀🚀🚀🚀</p>
+		</footer>
+		<script
+			src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""
+		></script>
+		<script src="script.js"></script>
+	</body>
+</html>

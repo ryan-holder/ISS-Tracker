@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Inconsolata", monospace;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	position: fixed;
+	height: 3rem;
+	width: 100%;
+	background: linear-gradient(to right, rgba(0, 0, 139, 1), rgba(255, 0, 0, 1));
+	z-index: 3;
+}
+
+.nav li {
+	list-style: none;
+}
+
+.nav li :hover {
+	background: black;
+	color: white;
+}
+
+.logo {
+	display: block;
+	position: fixed;
+	margin: 0.7rem 1rem;
+	transform: scale(1.3);
+	z-index: 10;
+}
+
+.logo:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+.nav a {
+	padding: 1rem 1.3rem 0.9rem 1.3rem;
+	text-decoration: none;
+	color: black;
+	font-size: 1.1rem;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	position: relative;
+	background: white;
+	height: 90vh;
+	z-index: 2;
+	font-weight: 600;
+}
+
+hr {
+	position: relative;
+	margin-left: 35%;
+	margin-top: 1.4%;
+	height: 0.3rem;
+	background: linear-gradient(to left, darkblue, red);
+	border-radius: 10px;
+	width: 30%;
+}
+
+.notmain {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	padding: 4rem 0 4rem 0;
+	background-color: black;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 0.7rem 3rem #000;
+	color: white;
+}
+
+.abovemap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	padding: 4rem 1rem 2rem 1rem;
+}
+
+.belowmap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	padding: 2rem 1rem 4rem 1rem;
+}
+
+.abovemap p {
+	text-align: center;
+	padding: 1rem;
+	border: solid 1px white;
+}
+
+.belowmap p {
+	text-align: center;
+	padding: 1rem;
+	border: solid 1px white;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.highlight {
+	color: yellow;
+}
+
+#map {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 55rem;
+	height: 27rem;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	height: 8rem;
+	position: sticky;
+	bottom: 0;
+	z-index: -1;
+	background: lightgrey;
+	overflow: hidden;
+}
+
+.footer p {
+	transform: scale(1.5);
+}
+
+@media all and (max-width: 40rem) {
+	#map {
+		width: 20rem;
+		height: 35rem;
+	}
+}
