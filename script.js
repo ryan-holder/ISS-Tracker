@@ -70,15 +70,13 @@ function updateLocation() {
 function updateAstronauts() {
 	fetch("http://api.open-notify.org/astros.json")
 		.then((res) => res.json())
-		.then(
-			(res) =>
-				(astroPara.innerHTML = `Astronauts <span class="highlight">
-			${res.people
-				.map((res) => Object.values(res))
-				.map((astrounauts) => astrounauts[1])
+		.then((res) => {
+			astroPara.innerHTML = `Astronauts <span class="highlight">
+			${Object.values(res.people)
+				.map((astronaut) => astronaut.name)
 				.join(", ")}
-			</span> are currently on the ISS`)
-		)
+			</span> are currently on the ISS`;
+		})
 		.catch((err) => console.log(err));
 }
 
@@ -105,5 +103,6 @@ updateLocation();
 setInterval(updateLocation, 5000);
 
 updateAstronauts();
+setInterval(updateAstronauts, 3600000);
 
 setInterval(updateTime, 100);
