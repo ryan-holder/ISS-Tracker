@@ -2,4 +2,4 @@
 
 Static web page that uses an API to track the location of the International Space Station.
 
-<img src="./iss-tracker-snap.png" alt="">
+![Image of ISS Tracker](https://github.com/ryan-holder/ISS-Tracker/iss-tracker-snap.png)
