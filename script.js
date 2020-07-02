@@ -44,7 +44,6 @@ function updateMap() {
 				[lat2, long2],
 			]);
 		});
-	setTimeout(updateMap, 5000);
 }
 
 function updateLocation() {
@@ -66,7 +65,6 @@ function updateLocation() {
 	}
 		</span>
 		`;
-	setTimeout(updateLocation, 5000);
 }
 
 function updateAstronauts() {
@@ -98,10 +96,14 @@ function updateTime() {
 	}${seconds}
 		</span>
 	`;
-	setTimeout(updateTime, 100);
 }
 
 updateMap();
+setInterval(updateMap, 5000);
+
 updateLocation();
-updateTime();
+setInterval(updateLocation, 5000);
+
 updateAstronauts();
+
+setInterval(updateTime, 100);
