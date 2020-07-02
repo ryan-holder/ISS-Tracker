@@ -31,14 +31,8 @@ function updateMap() {
 	fetch("http://api.open-notify.org/iss-now.json")
 		.then((res) => res.json())
 		.then((res) => {
-			if (Object.keys(res.iss_position)[0] === "latitude") {
-				// this is because the api seems to change...
-				latitude = Object.values(res.iss_position)[0];
-				longitude = Object.values(res.iss_position)[1];
-			} else {
-				latitude = Object.values(res.iss_position)[1];
-				longitude = Object.values(res.iss_position)[0];
-			}
+			latitude = res.iss_position.latitude;
+			longitude = res.iss_position.longitude;
 			map.panTo([latitude, longitude], (animate = true));
 			// circle.setLatLng([latitude, longitude]);
 			let lat1 = Number(latitude) - 1.5;
